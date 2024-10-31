@@ -1,11 +1,11 @@
 #include<stdio.h>
 void toh(int disks,char source[],char destination[],char auxillary[]){
     if(disks==1){
-        printf("Move disk 1 from %s to %s ",source,destination);
+        printf("Move disk 1 from %s to %s \n",source,destination);
     }
     else{
         toh(disks-1,source,auxillary,destination);
-        printf("Move disk %d from %s to %s", disks, source,destination);
+        printf("Move disk %d from %s to %s\n", disks, source,destination);
         toh(disks-1,auxillary,destination,source);
     }
 }
